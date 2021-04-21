@@ -1,16 +1,18 @@
 import React, { FC, useState } from 'react';
+import Head from 'next/head';
 
 interface TitleProps {
-  title: string;
-  subtitle: string,
+  text: string;
 }
 
-const Header: React.FC<TitleProps> = ({ title, subtitle }) => {
+const Header: React.FC<TitleProps> = ({ text }) => {
   const [titleValue, setTitleValue] = useState<string>();
     return (
       <div>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
+        <Head>
+          <title>{text}</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
       </div>
     );
   };
