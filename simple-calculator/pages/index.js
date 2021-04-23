@@ -1,38 +1,20 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Nextjs calculator</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          A simple calculator
-        </h1>
-
-        <p className={styles.description}>
-          A simple project using xState, React, typescript and Nextjs.
+      <section className={utilStyles.headingMd}>
+        <p>I am a software engineer in video software industry in Finland.</p>
+        <p>
+          In this project we are gonna make a simpple calculator using xState,
+          React, Typescript and Nextjs.
         </p>
-
-        <div className={styles.grid}>
-          
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      </section>
+    </Layout>
   )
 }
